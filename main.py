@@ -103,18 +103,18 @@ def bfs_shortest_path(graph, start, end):
 def main(test):
     input_list = generate_input(test)
     bridge_list = generate_bridge(input_list)
-
     jump_graph = generate_graph(bridge_list)
     start,end = generate_start_end(bridge_list)
-    pace = len(bfs_shortest_path(jump_graph, start, end))-1
-    # pace = len(shortest_path(jump_graph,start,end))-1
-    # pace = bfs_pace(jump_graph,start,end)
+    # path = bfs_shortest_path(jump_graph, start, end)
+    # path = shortest_path(jump_graph,start,end)
+    # pace = len(path)-1
+    pace = bfs_pace(jump_graph,start,end)
     # print(start,end)
-    print(input_list)
-    print(bridge_list)
-    print(start,end)
-    print(jump_graph)
-    # print(shortest_path(jump_graph))
+    # print(input_list)
+    # print(bridge_list)
+    # print(start,end)
+    # print(jump_graph)
+    # print(path)
     print(pace)
 
 input = open(r'input.txt')
